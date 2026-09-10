@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasnan ❤️ Sathi</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#12001f,#30002f,#080016);
+  color:white;
+}
+.hearts span{
+  position:fixed; bottom:-30px; font-size:22px;
+  animation:up linear infinite; opacity:.7;
+}
+@keyframes up{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+.card{
+  width:min(92%,430px); padding:35px 24px; text-align:center;
+  border:1px solid rgba(255,255,255,.2); border-radius:28px;
+  background:rgba(255,255,255,.09); backdrop-filter:blur(12px);
+  box-shadow:0 0 45px rgba(255,0,120,.25);
+}
+h1{font-size:42px;margin:5px 0 10px}
+.names{font-size:25px;font-weight:bold;color:#ff9bc8}
+p{line-height:1.7;color:#eee}
+.question{font-size:23px;font-weight:bold;margin:25px 0}
+button{
+  border:0;border-radius:30px;padding:13px 28px;margin:7px;
+  font-size:17px;font-weight:bold;cursor:pointer;
+}
+.yes{background:#ff3d91;color:white}
+.no{background:#fff;color:#222}
+#answer{min-height:28px;font-weight:bold;color:#ff9bc8}
+</style>
+</head>
+<body>
+
+<div class="hearts">
+<span style="left:8%;animation-duration:7s">❤</span>
+<span style="left:22%;animation-duration:10s">💗</span>
+<span style="left:38%;animation-duration:8s">❤</span>
+<span style="left:57%;animation-duration:12s">💖</span>
+<span style="left:74%;animation-duration:9s">❤</span>
+<span style="left:89%;animation-duration:11s">💗</span>
+</div>
+
+<div class="card">
+  <div style="font-size:45px">💌</div>
+  <h1>Tasnan ❤️ Sathi</h1>
+  <div class="names">A little question from Tasnan...</div>
+
+  <p>
+    Sathi,<br>
+    অনেক কথা হয়তো মুখে বলা যায় না।<br>
+    তাই আজ একটু অন্যভাবে বলছি... ✨
+  </p>
+
+  <div class="question">Will you be mine? ❤️</div>
+
+  <button class="yes" onclick="yesAnswer()">YES 💖</button>
+  <button class="no" onclick="noAnswer()">NO 🙈</button>
+
+  <div id="answer"></div>
+</div>
+
+<script>
+function yesAnswer(){
+  document.getElementById("answer").innerHTML =
+  "Yay! 💖 Tasnan-এর আজকের দিনটা special হয়ে গেল! 🥰";
+}
+function noAnswer(){
+  document.getElementById("answer").innerHTML =
+  "একবার ভেবে দেখো না... 🥺❤️";
+}
+</script>
+
+</body>
+</html>
